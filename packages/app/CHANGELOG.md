@@ -1,5 +1,33 @@
 # @papra/app
 
+## 26.1.1
+
+### Patch Changes
+
+- [#820](https://github.com/papra-hq/papra/pull/820) [`3fa398c`](https://github.com/papra-hq/papra/commit/3fa398c92851e6f0c767bd66e8cc2f0e523577ef) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Replaced `date-fns` functions with in-house implementations to avoid pulling the 30MB lib (mainly due to locale data).
+
+- [#852](https://github.com/papra-hq/papra/pull/852) [`71872db`](https://github.com/papra-hq/papra/commit/71872db3678307de6e1b15a9b63653bd949e0202) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Added explicit error when trying to update a tag with a name that already exists
+
+- [#827](https://github.com/papra-hq/papra/pull/827) [`ca2ef28`](https://github.com/papra-hq/papra/commit/ca2ef2866bfb54abaed26c4c748b4ec5fadf6170) Thanks [@CorentinTh](https://github.com/CorentinTh)! - In the search queries, tag filters are now case-insensitive, so `tag:Important` and `tag:important` will match the same tag (as tags names are case-insensitive).
+
+- [#826](https://github.com/papra-hq/papra/pull/826) [`494aa5b`](https://github.com/papra-hq/papra/commit/494aa5b882315fb55ab84f78259d899e5e2d5355) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Trim tag names and descriptions on creation and update to avoid leading/trailing spaces.
+
+- [#829](https://github.com/papra-hq/papra/pull/829) [`393a155`](https://github.com/papra-hq/papra/commit/393a15593fdc60ebd11dcf82c29ae95159122f25) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Added a button to generate a random color in the tag creation/edition modal.
+
+- [#815](https://github.com/papra-hq/papra/pull/815) [`46d8d2d`](https://github.com/papra-hq/papra/commit/46d8d2d45ec89aebe7e41c78a6d6cf85fce9cc0b) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Significantly reduced the size of the rootless docker image by preventing file duplications due to `chown` operations, gaining ~230MB, more than 30% reduction in size.
+
+- [#859](https://github.com/papra-hq/papra/pull/859) [`afcfcf7`](https://github.com/papra-hq/papra/commit/afcfcf75cb69661f0e9df0cbbd139b00441d92d3) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Fixed a race condition that could incorrectly show the "Email verified" page after successful login, even when email verification had not been completed or was not required.
+
+- [#855](https://github.com/papra-hq/papra/pull/855) [`3f4ca07`](https://github.com/papra-hq/papra/commit/3f4ca07a5d339542d80100d172f27590341f4469) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Added tagging rules creation/update loading states
+
+- [#811](https://github.com/papra-hq/papra/pull/811) [`1eeb3df`](https://github.com/papra-hq/papra/commit/1eeb3df4a282d93bb71c8f34cf086fa0babfb40e) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Added small header in organization creation page to quickly access the invitations when first organization is being created
+
+- [#851](https://github.com/papra-hq/papra/pull/851) [`316a8c2`](https://github.com/papra-hq/papra/commit/316a8c2f9c326695c5a943556c2b97e99a58c0a4) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Added tag creation/update button loading state
+
+- [#855](https://github.com/papra-hq/papra/pull/855) [`3f4ca07`](https://github.com/papra-hq/papra/commit/3f4ca07a5d339542d80100d172f27590341f4469) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Prevented multiple tagging-rules creation attempts when clicking the create button quickly.
+
+- [#851](https://github.com/papra-hq/papra/pull/851) [`316a8c2`](https://github.com/papra-hq/papra/commit/316a8c2f9c326695c5a943556c2b97e99a58c0a4) Thanks [@CorentinTh](https://github.com/CorentinTh)! - Prevented multiple tag creation attempts when clicking the create button quickly.
+
 ## 26.1.0
 
 ### Minor Changes
@@ -23,7 +51,6 @@
 - [#794](https://github.com/papra-hq/papra/pull/794) [`0485701`](https://github.com/papra-hq/papra/commit/0485701c6614d652dfd5b8286c92a1c0e7cf367e) Thanks [@ktsourdinis](https://github.com/ktsourdinis)! - Added Greek language support
 
 - [#798](https://github.com/papra-hq/papra/pull/798) [`c27d85f`](https://github.com/papra-hq/papra/commit/c27d85fea41eaf6ba0d87890d4952e502aeec864) Thanks [@cergmin](https://github.com/cergmin)! - Added Russian language support
-
 
 ## 26.0.0
 
